@@ -1,0 +1,731 @@
+/* -webkit- => chrome, safari, new opera version */
+
+/* -moz- => firefox */
+
+/* -ms- => Ie? EDGE */
+
+/* -o- => oold version of opera */
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Josefin+Sans&family=Roboto:ital,wght@0,100;1,100&family=Square+Peg&display=swap');
+
+:root{
+    --primarycolor: #ff274b;
+    --secondarycolor: #f7bcf7;
+    --lightcolor: #ffffff;
+    --bgcolor: #171a1c;
+    --bgcolor2: #22282a;
+    --padding: 20%; 
+    --orangecolor: rgb(255, 94, 0);
+    --bluecolor: #039FFA;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+header{
+    background-color: var(--bgcolor2);
+    height: 100vh;
+    width: 100%;
+}
+
+.logo{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.logo span{
+    color: var(--primarycolor);
+    font-family: "Roboto";
+    text-transform: uppercase;
+}
+
+.container-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 120px;
+}
+
+.container-navbar ul li{
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+
+.container-navbar ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--lightcolor);
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+    transition: all 0.6s ease 0s;
+
+}
+
+.container-navbar ul li:hover::after{
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: var(--lightcolor);
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+
+}
+
+.container-navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: "Indie Flower";
+    margin-left: 10px;
+    font-size: 23px;
+}
+/* end navbar */
+/* ///////////////////////////////////// */
+.content{
+    height: 90%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.content-title h1{
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 13px;
+    font-family: "Roboto";
+}
+
+.content-title span{
+    color: rgb(167, 12, 12);
+}
+
+.content-title p{
+    color: rgba(255, 255, 255, 0.767);
+    font-size: 18px;
+    line-height: 25px;
+    width: 60%;
+    margin-bottom: 30px;
+    font-family: "Roboto";
+}
+
+.content .btn{
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 19px;
+    background-color: rgb(167, 12, 12);
+    font-family: "Roboto";
+}
+
+.content .btn:hover{
+    background-color: rgb(110, 5, 5);
+}
+
+.content-img img{
+    width: 80%;
+}
+
+@media (max-width: 600px){
+    .logo{
+        display: none;
+    }
+    
+    .content-title h1{
+        color: #fff;
+        font-size: 40px;
+        margin-bottom: 13px;
+        display: flex;
+        flex-grow: 1;
+    }
+    
+    .content-title p{
+        color: rgba(255, 255, 255, 0.699);
+        font-size: 21px;
+        width: 60%;
+        margin-bottom: 30px;
+        font-family: "Roboto";
+    }
+    
+    .content .btn{
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 19px;
+        background-color: rgb(167, 12, 12);
+        transition: all 1.2s ease 0s;
+    }
+    
+    .content .btn:hover{
+        background-color: rgb(110, 5, 5);
+    }
+    
+    .content-img img{
+        width: 80%;
+        display: none;
+    }
+
+}
+/* end content */
+
+/* //////////////////////////////////////// */
+
+
+.section{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgcolor2);
+}
+
+.container img{
+    width: 530px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 58%;
+    margin: auto;
+}
+
+.title{
+    width: 47%;
+}
+
+.title h1{
+    color: rgb(175, 9, 9);
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-family: 'Indie Flower';
+    letter-spacing: 2px;
+}
+
+.title h2{
+    text-transform: capitalize;
+    font-size: 40px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-family: 'Square Peg';
+}
+
+.title p{
+    width: 95%;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.644);
+    font-family: 'Roboto';
+}
+
+.title button{
+    padding: 10px 25px;
+    background-color: var(--primarycolor);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Roboto';
+    font-weight: bolder;
+}
+
+.title span{
+    color: rgba(255, 0, 0, 0.685);
+    letter-spacing: 1px;
+    font-family: 'Square Peg';
+}
+
+.title button:hover{
+    background-color: rgb(202, 5, 5);
+}
+
+
+@media (max-width: 900px){
+
+    .section{
+        width: 100%;
+        height: 100%;
+        background-color: var(--bgcolor2);
+    }
+    
+    .container img{
+        width: 530px;
+    }
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        width: 58%;
+        margin: auto;
+    }
+    
+    .title{
+        width: 100%;
+    }
+    
+    .title h1{
+        color: rgb(175, 9, 9);
+        text-transform: uppercase;
+        font-size: 50px;
+        margin-bottom: 10px;
+        font-family: 'Indie Flower';
+        letter-spacing: 2px;
+    }
+    
+    .title h2{
+        text-transform: capitalize;
+        font-size: 40px;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        font-family: 'Square Peg';
+    }
+    
+    .title p{
+        width: 100%;
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.644);
+        font-family: "Indie Flower";
+    }
+    
+    .title button{
+        padding: 10px 25px;
+        background-color: var(--primarycolor);
+        color: #fff;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        font-family: 'Roboto';
+        font-weight: bolder;
+    }
+    
+    .title span{
+        color: rgba(255, 0, 0, 0.685);
+        letter-spacing: 1px;
+        font-family: 'Square Peg';
+    }
+    
+    .title button:hover{
+        background-color: rgb(202, 5, 5);
+    }
+
+}
+
+
+
+
+@media (max-width: 1290px){
+
+    .section{
+        width: 100%;
+        height: 100%;
+        background-color: var(--bgcolor2);
+    }
+    
+    .container img{
+        width: 530px;
+    }
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        width: 58%;
+        margin: auto;
+    }
+    
+    .title{
+        width: 100%;
+    }
+    
+    .title h1{
+        color: rgb(175, 9, 9);
+        text-transform: uppercase;
+        font-size: 50px;
+        margin-bottom: 10px;
+        font-family: 'Indie Flower';
+        letter-spacing: 2px;
+    }
+    
+    .title h2{
+        text-transform: capitalize;
+        font-size: 40px;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        font-family: 'Square Peg';
+    }
+    
+    .title p{
+        width: 100%;
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.644);
+        font-family: 'Roboto';
+    }
+    
+    .title button{
+        padding: 10px 25px;
+        background-color: var(--primarycolor);
+        color: #fff;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        font-family: 'Roboto';
+        font-weight: bolder;
+    }
+    
+    .title span{
+        color: rgba(255, 0, 0, 0.685);
+        letter-spacing: 1px;
+        font-family: 'Square Peg';
+    }
+    
+    .title button:hover{
+        background-color: rgb(202, 5, 5);
+    }
+
+}
+
+@media (max-width: 1400px){
+    .section{
+        width: 100%;
+        height: 100%;
+        background-color: var(--bgcolor2);
+    }
+    
+    .container img{
+        width: 530px;
+    }
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+    }
+    
+    .title{
+        width: 100%;
+    }
+    
+    .title h1{
+        color: rgb(175, 9, 9);
+        text-transform: uppercase;
+        font-size: 50px;
+        margin-bottom: 10px;
+        font-family: 'Indie Flower';
+        letter-spacing: 2px;
+    }
+    
+    .title h2{
+        text-transform: capitalize;
+        font-size: 40px;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        font-family: 'Square Peg';
+    }
+    
+    .title p{
+        width: 100%;
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.644);
+        font-family: 'Roboto';
+    }
+    
+    .title button{
+        padding: 10px 25px;
+        background-color: var(--primarycolor);
+        color: #fff;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        font-family: 'Roboto';
+        font-weight: bolder;
+    }
+    
+    .title span{
+        color: rgba(255, 0, 0, 0.685);
+        letter-spacing: 1px;
+        font-family: 'Square Peg';
+    }
+    
+    .title button:hover{
+        background-color: rgb(202, 5, 5);
+    }
+}
+
+
+
+@media (max-width: 500px){
+
+    .section{
+        width: 100%;
+        height: 100%;
+        background-color: var(--bgcolor2);
+    }
+    
+    .container img{
+        width: 400px;
+    }
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        width: 58%;
+        margin: auto;
+    }
+    
+    .title{
+        width: 100%;
+    }
+    
+    .title h1{
+        color: rgb(175, 9, 9);
+        text-transform: uppercase;
+        font-size: 50px;
+        margin-bottom: 10px;
+        font-family: 'Indie Flower';
+        letter-spacing: 2px;
+    }
+    
+    .title h2{
+        text-transform: capitalize;
+        font-size: 40px;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        font-family: 'Square Peg';
+    }
+    
+    .title p{
+        width: 100%;
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.644);
+        font-family: "Indie Flower";
+    }
+    
+    .title button{
+        padding: 10px 25px;
+        background-color: var(--primarycolor);
+        color: #fff;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        font-family: 'Roboto';
+        font-weight: bolder;
+    }
+    
+    .title span{
+        color: rgba(255, 0, 0, 0.685);
+        letter-spacing: 1px;
+        font-family: 'Square Peg';
+    }
+    
+    .title button:hover{
+        background-color: rgb(202, 5, 5);
+    }
+
+}
+
+/* end about */
+
+/* ////////////////////////////////////////////////// */
+
+.service{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bgcolor2);
+}
+
+.max-width{
+    width: 75%;
+    margin: auto;
+}
+
+.max-width h1{
+    text-align: center;
+    color: #79081b;
+    margin-bottom: 100px;
+    font-family: "Square Peg";
+    font-size: 50px;
+    position: relative;
+}
+
+.max-width h1::after{
+    content: "";
+    width: 160px;
+    height: 2px;
+    background-color: rgb(168, 32, 32);
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+.content-serv{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.card{
+    background-color: var(--bgcolor);
+    padding: 50px 25px;
+    text-align: center;
+    border-radius: 6px;
+    margin-left: 20px;
+    user-select: none;
+}
+
+.card:hover{
+    background-color: rgba(247, 40, 40, 0.199);
+}
+
+.box i{
+    color: rgb(172, 8, 8);
+    font-size: 70px;
+    margin-bottom: 25px;
+}
+
+.box h3{
+    color: rgb(160, 32, 32);
+    margin-bottom: 5px;
+    font-family: "Indie Flower";
+    font-size: 25px;
+}
+
+.box p{
+    color: rgba(255, 255, 255, 0.781);
+    font-family: 'Roboto';
+}
+
+@media (max-width: 1400px){
+    .service{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bgcolor2);
+    }
+    
+    .max-width{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 900px){
+    .service{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bgcolor2);
+    }
+    
+    .max-width{
+        width: 100%;
+        margin: auto;
+    }
+
+    .content-serv{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .card{
+        margin-bottom: 20px;
+    }
+}
+
+/* end service */
+
+/* /////////////////////////////////////////////////// */
+
+.contact{
+    padding: 78px 0;
+    width: 100%;
+    background-color: var(--bgcolor2);
+}
+
+.max-width-contact{
+    width: 60%;
+    margin: auto;
+}
+
+.max-width-contact h1{
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgb(161, 4, 4);
+    font-family: "Indie Flower";
+    font-size: 40px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact-form .space-contact{
+    margin-bottom: 30px;
+    padding: 20px 15px;
+    background-color: var(--bgcolor);
+    border-radius: 6px;
+    border: none;
+    color: rgba(255, 255, 255, 0.712);
+    font-size: 14px;
+}
+
+.contact-form .message{
+    height: 100px;
+    margin-bottom: 60px;
+}
+
+.contact-form .space-contact:focus{
+    outline: none;
+}
+
+.contact-form .btn-contact{
+    width: 13%;
+    padding: 5px 0;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    font-family: "Indie Flower";
+    background-color: #79081b;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact-form .btn-contact:hover{
+    background-color: #aa132c;
+}
